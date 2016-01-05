@@ -1,0 +1,131 @@
+#container{
+    position: relative;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:20px;
+    width:90%;
+    height:1900px;
+    background-color: #F8F8F8;
+}
+
+#header{
+    position: relative;
+    height:60px;
+    width:100%;
+}
+
+#logo{
+    height:70px;
+    position:absolute;
+    left:40%;
+    top:20px;
+}
+.header-item{
+    display:inline-block;
+}
+
+.header-text{
+    font-family: 'Patua One', cursive;
+    font-weight: bolder;
+    font-size: 1em;
+}
+
+.header-item-right{
+    position:relative;
+    float: right;
+    top:50px;
+    right:100px;
+}
+
+.header-item-left{
+    float:left;
+    position:relative;
+    left:100px;
+    top:50px;
+}
+
+.header-icon{
+    top:56px;
+
+}
+
+#main-banner-title-container{
+    text-align: center;
+    position: relative;
+    top:30px;
+}
+
+#main-banner-title-wrapper{
+    display: inline-block;
+    max-width:900px;
+    margin-top:45px;
+    margin-bottom:20px;
+}
+
+#main-banner-title{
+    font-size: 4em;
+}
+
+#main-banner-description{
+    width: 80%;
+    margin-top:10px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#main-banner-links{
+    color:#FFA409;
+    margin-top:20px;
+}
+
+.margin-bar{
+    margin-right:25px;
+    margin-left:25px;
+    color: #FFA409;
+}
+
+#main-banner-links a{
+    text-decoration: none;
+    font-size: large;
+    color: #FFA409;
+}
+
+#main-banner-image{
+    height:600px;
+    position: relative;
+    top:30px;
+    background-image: url("main-banner2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 99%;
+}
+
+#main-banner-next-arrow{
+    color: #FFA409;
+    position: absolute;
+    right: 60px;
+    bottom:60px;
+    font-size:2em ;
+    -webkit-transition-property: font-size;
+    -moz-transition-property: font-size;
+    -ms-transition-property: font-size;
+    -o-transition-property: font-size;
+    transition-property: font-size;
+   
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -ms-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+
+    -webkit-transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out;
+    -ms-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+    
+}
+
+#main-banner-next-arrow:hover{
+    font-size:3em;
+}
