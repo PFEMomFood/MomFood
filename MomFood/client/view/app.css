@@ -3,7 +3,7 @@
     margin-left:auto;
     margin-right:auto;
     margin-top:20px;
-    width:90%;
+    width:98%;
     height:1900px;
     background-color: #F8F8F8;
 }
@@ -13,21 +13,37 @@
     height:100px;
     width:100%;
     z-index:10;
+    top:13px;
+
+    -webkit-transition-property: top,background-color;
+    -moz-transition-property: top,background-color;
+    -ms-transition-property: top,background-color;
+    -o-transition-property: top,background-color;
+    transition-property: top,background-color;
+
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -ms-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+
+
+
 }
 
 .fixed-header{
-    top:-13px;
+    top:-13px !important;
     background-color: white;
 }
 
 #logo{
     position:absolute;
     left:40%;
-    top:20px;
+    top:25px;
 }
 
 #logo img{
-    height:70px;
+    height:60px;
 }
 .header-item{
     display:inline-block;
@@ -43,13 +59,13 @@
     position:relative;
     float: right;
     top:50px;
-    right:150px;
+    right:100px;
 }
 
 .header-item-left{
     float:left;
     position:relative;
-    left:150px;
+    left:100px;
     top:50px;
 }
 
