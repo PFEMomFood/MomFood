@@ -15,5 +15,8 @@ Meteor.startup(function(){
                 document.getElementById("header").className="";
             }
         }
+
+        //ReactDOM.render(App.index,document.getElementsByTagName("body"))
     }
+
 })
