@@ -9,16 +9,25 @@
 }
 
 #header{
-    position: relative;
-    height:60px;
+    position: fixed;
+    height:100px;
     width:100%;
+    z-index:10;
+}
+
+.fixed-header{
+    top:-13px;
+    background-color: white;
 }
 
 #logo{
-    height:70px;
     position:absolute;
     left:40%;
     top:20px;
+}
+
+#logo img{
+    height:70px;
 }
 .header-item{
     display:inline-block;
@@ -34,13 +43,13 @@
     position:relative;
     float: right;
     top:50px;
-    right:100px;
+    right:150px;
 }
 
 .header-item-left{
     float:left;
     position:relative;
-    left:100px;
+    left:150px;
     top:50px;
 }
 
@@ -52,7 +61,8 @@
 #main-banner-title-container{
     text-align: center;
     position: relative;
-    top:30px;
+    /*top:30px;*/
+    padding-top: 100px;
 }
 
 #main-banner-title-wrapper{
