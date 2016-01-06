@@ -22,6 +22,7 @@ App.index = React.createClass({
                                 <div id="main-banner-title">
                                     <span>Devant nous s'ouvre le souvenir  Derrière, le passé, l'enfance</span>
                                 </div>
+                                <div><h1>hello world mingming</h1></div>
                                 <div id="main-banner-description">
                         <span>Have you ever missed the flavor of your mom's? Those are memories full with joy and laughters.
                             Come and wake up memories of the food from your childhood. With the choice of editors, you are going
