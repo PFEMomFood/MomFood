@@ -2,6 +2,7 @@
  * Created by Cedric on 06/01/16.
  */
 
+App = {};
 
 Meteor.startup(function(){
     if (!Meteor.isServer){

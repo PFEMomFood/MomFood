@@ -1,19 +1,15 @@
 /**
  * Created by Cedric on 06/01/16.
  */
-App = {};
+
 
 App.index = React.createClass({
     render(){
         return(
             <div id="container-wrapper">
-                <div id="header">
-                    <div className="header-text header-item header-item-left">Homepage</div>
-                    <div className="header-item" id="logo"><img src="logo.png" alt=""/></div>
-                    <i className="fa fa-search header-item header-item-right header-icon"></i>
-                    <i className="fa fa-spoon margin-bar header-item header-item-right header-icon"></i>
-                    <div className="header-text header-item header-item-right">Connect</div>
-                </div>
+                <link href='https://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css'/>
+               <App.search />
+                <App.header />
 
                 <div id="container">
                     <div id="main-banner">
