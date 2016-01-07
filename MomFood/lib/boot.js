@@ -2,6 +2,7 @@
  * Created by Cedric on 06/01/16.
  */
 
+App = {};
 
 Meteor.startup(function(){
     if (!Meteor.isServer){
@@ -15,5 +16,8 @@ Meteor.startup(function(){
                 document.getElementById("header").className="";
             }
         }
+
+        //ReactDOM.render(App.index,document.getElementsByTagName("body"))
     }
+
 })
