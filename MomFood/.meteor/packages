@@ -22,3 +22,8 @@ kadira:flow-router
 fortawesome:fontawesome
 react
 kadira:react-layout
+accounts-password
+twbs:bootstrap
+accounts-ui
+accounts-facebook
+accounts-google

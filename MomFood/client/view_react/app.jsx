@@ -2,8 +2,14 @@
  * Created by Cedric on 06/01/16.
  */
 
-
 App.index = React.createClass({
+    mixins: [ReactMeteorData],
+    // Loads items from the Tasks collection and puts them on this.data.tasks
+    getMeteorData() {
+        return {
+            currentUser:Meteor.user()
+        };
+    },
     render(){
         return(
             <div id="container-wrapper">

@@ -145,7 +145,7 @@ body{
     position:relative;
     float: right;
     top:50px;
-    right:100px;
+    right:120px;
 }
 
 .header-item-left{
@@ -307,3 +307,4 @@ body{
 /* .inline{
     float: left;
 } */
+
