@@ -15,8 +15,8 @@ App.index = React.createClass({
             <div id="container-wrapper">
                 <link href='https://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css'/>
                <App.search />
-                <App.header />
-
+                <App.header currrentUser={this.data.currentUser} />
+                <App.ConnModal/>
                 <div id="container">
                     <div id="main-banner">
                         <div id="main-banner-title-container">
@@ -45,7 +45,7 @@ App.index = React.createClass({
                         </div>
 
                     </div>
-                    <div id="EventCards" >
+                    /*<div id="EventCards" >
                         <div id="RowCards-container">
                             <div id="RowCenter">
                                 <div className="EventCard">
@@ -72,7 +72,7 @@ App.index = React.createClass({
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>*/
                 </div>
             </div>
         )

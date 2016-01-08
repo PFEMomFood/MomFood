@@ -14,8 +14,11 @@ App.header = React.createClass({
                 <i className="fa fa-search header-item header-item-right header-icon header-search-icon" onClick={this.handleClick}></i>
                 <i className="fa fa-spoon margin-bar header-item header-item-right header-icon"></i>
                 <div className="header-text header-item header-item-right">
-
-                    <App.AccountUIWrapper></App.AccountUIWrapper>
+                    {
+                        this.props.currentUser?
+                            <App.LogoutButton currentUser={this.props.currentUser}/> :<a data-toggle="modal" data-target="#myModal" >
+                            Connection</a>
+                    }
                 </div>
 
             </div>
