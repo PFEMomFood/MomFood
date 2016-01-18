@@ -15,13 +15,15 @@ App.header = React.createClass({
                 <i className="fa fa-spoon margin-bar header-item header-item-right header-icon"></i>
                 <div className="header-text header-item header-item-right">
                     {
-                        this.props.currentUser?
-                            <App.LogoutButton currentUser={this.props.currentUser}/> :<a data-toggle="modal" data-target="#myModal" >
+                        this.props.currentUser? <App.LogoutButton currentUser={this.props.currentUser}/> :<a onClick={this.props.handleShowModal} href="#">
                             Connection</a>
                     }
                 </div>
 
             </div>
         )
+    },
+    propTypes:{
+        handleShowModal: React.PropTypes.func.isRequired
     }
 })

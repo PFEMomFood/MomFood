@@ -1,13 +1,37 @@
-a {
-    text-decoration: none;
+/*这里定义了一个可以共用的class的样式，为了保持我们网站style风格的一致性：
+a：抹去下划线，颜色是橙色#FFA409
+.butt 有浅灰的边框，hover时边框变黑，鼠标键入时边框变橙变粗
+.btn-main 橙色的border和background，白色的text
+disabled的.butt 灰灰的backgroud，灰灰的text
+
+*/
+.col-12{
+    width:100%;
+}
+
+a:visited{
+    text-decoration:none;
+}
+a{
+    text-decoration:none;
     color:#FFA409 ;
 }
+
 a:hover{
-    text-decoration: none;
+    text-decoration:none;
     color:black;
 }
 #myModal{
     padding-top: 200px;
+}
+
+
+
+@media (min-width: 400px){
+    #conn-dialog{
+        width:400px;
+        margin: 30px auto;
+    }
 }
 
 .conn-form{
@@ -17,30 +41,31 @@ a:hover{
 
 }
 .conn-form input{
-    margin-top:20px;
+    margin-bottom:20px;
 }
 
-.btn-col{
-    width:80%;
+.butt{
     display: inline-block;
     padding: 6px 12px;
     margin-bottom: 0;
     line-height: 1.42857143;
-    text-align: center;
     white-space: nowrap;
     vertical-align: middle;
     -ms-touch-action: manipulation;
     touch-action: manipulation;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
     background-image: none;
     border: 1px solid transparent;
     border-radius: 4px;
     box-sizing:border-box;
 }
+
+.btn-main{
+    background: #FFA409;
+    border-color: #FFA409;
+    color: #fff;
+    box-shadow: none;
+}
+
 .btn-input {
     font-weight: lighter;
     font-size: larger;
@@ -49,14 +74,15 @@ a:hover{
     border-color: #ccc;
 
 }
-.btn-submit{
+
+.btn-main[disabled]{
     background: #d6dce2;
     border-color: #d6dce2;
     color: #6b7781;
     box-shadow: none;
-
 }
 .btn-input:hover{
+    outline: none;
     border-color: #333;
 }
 .btn-input:focus{
@@ -93,3 +119,4 @@ a:hover{
     text-align: center;
 
 }
+

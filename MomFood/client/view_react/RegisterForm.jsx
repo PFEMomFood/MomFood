@@ -6,10 +6,9 @@
  */
 App.RegisterForm=React.createClass({
     getInitialState: function() {
-        return {userName: '', password: '',repass:''};
+        return {userName: '', password: '',repass:'',alert:''};
     },
     toLogin:function(){
-
         $("#myModal").removeClass('registering');
         /*this.setState({registering:false});*/
     },
@@ -23,17 +22,24 @@ App.RegisterForm=React.createClass({
         var isValidPassword = function(val) {
             return val.length >= 6 ? true : false;
         };
-        if(pass==repass&&isValidPassword(pass))
-            Accounts.createUser({username: usr, password : pass}, function(err){
-                if (err)
-                 alert("login failed");
-                 // The user might not have been found, or their passwword
-                 // could be incorrect. Inform the user that their
-                 // login attempt has failed.
-                 else
-                    $('#myModal').modal('hide');
-            });
-
+        if(isValidPassword(pass)){
+            if(pass==repass){
+                self=this;
+                Accounts.createUser({username: usr, password : pass}, function(err){
+                    if (err)
+                        self.setState({alert:'System error, please try to register again.'});
+                    else
+                    {
+                        $('#myModal').modal('hide');
+                        self.setState({userName:""});
+                        self.setState({password:""});
+                        self.setState({repass:""});
+                    }
+                });
+            }
+            else this.setState({alert:'The passwords are inconsistent.'});
+        }
+        else this.setState({alert:'The length of password should be longer than 6.'});
         return false;
     },
     handleUsernameChange: function(e) {
@@ -50,13 +56,20 @@ App.RegisterForm=React.createClass({
         return (
             <div className="modal-content" id="register-form">
                 <form className="conn-form" role="document"  onSubmit={this.RegisterUser} >
-                    <input className="btn-input btn-col" type="text" id="login-email" placeholder="username" onChange={this.handleUsernameChange} />
+                    {
+                        this.state.alert!==''?
+                            <div className="alert alert-danger" role="alert">
+                                <span className="sr-only">Error:</span>
+                                {this.state.alert}
+                            </div>:''
+                    }
+                    <input className="btn-input butt col-12" type="text"  placeholder="username" value={this.state.userName} onChange={this.handleUsernameChange} />
                     <br/>
-                    <input className="btn-input btn-col" type="password" id="login-password" placeholder="password" onChange={this.handlePasswordChange}/>
+                    <input className="btn-input butt col-12" type="password"  placeholder="password" value={this.state.password} onChange={this.handlePasswordChange}/>
                     <br/>
-                    <input className="btn-input btn-col" type="password" id="login-repass" placeholder="password(again)" onChange={this.handleRepassChange}/>
+                    <input className="btn-input butt col-12" type="password"  placeholder="password(again)"  value={this.state.repass}onChange={this.handleRepassChange}/>
                     <br/>
-                    <input className="btn-submit btn-col" type="submit" id="login-button" value="REGISTER" />
+                    <button className="btn-main butt col-12" type="submit" disabled={this.state.userName==''||this.state.password==''||this.state.repass==''}>REGISTER</button>
 
 
                 </form>
