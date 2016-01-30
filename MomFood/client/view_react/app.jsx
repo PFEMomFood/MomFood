@@ -2,14 +2,33 @@
  * Created by Cedric on 06/01/16.
  */
 
-
 App.index = React.createClass({
+    mixins: [ReactMeteorData],
+    // Loads items from the Tasks collection and puts them on this.data.tasks
+    getMeteorData() {
+        return {
+            currentUser:Meteor.user()
+        };
+    },
+    getInitialState(){
+        return {view: {showConnModal: false}}
+    },
+    handleHideModal(){
+        this.setState({view: {showConnModal: false}})
+    },
+    handleShowModal(){
+        this.setState({view: {showConnModal: true}})
+    },
     render(){
         return(
             <div id="container-wrapper">
                 <link href='https://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css'/>
                <App.search />
-                <App.header />
+                <App.header currentUser={this.data.currentUser} handleShowModal={this.handleShowModal} />
+
+
+                {this.state.view.showConnModal ? <App.ConnModal handleHideModal={this.handleHideModal}/> : null}
+
 
                 <div id="container">
                     <div id="main-banner">
@@ -39,34 +58,7 @@ App.index = React.createClass({
                         </div>
 
                     </div>
-                    <div id="EventCards" >
-                        <div id="RowCards-container">
-                            <div id="RowCenter">
-                                <div className="EventCard">
-                                <span><a id="EventName" href="mingmingzhang.com"><img className="EventImg" src="makalong.png"  alt="makalong" /></a></span>
-                                </div>
-                                <div className="EventCard">
-                                <span><a id="EventName" href="mingmingzhang.com"><img className="EventImg" src="esgarool.png"  alt="esgarool" /></a></span>
-                                </div> 
-                                <div className="EventCard">
-                                <span><a id="EventName" href="mingmingzhang.com"><img className="EventImg" src="crasong.png"  alt="crasong" /></a></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="RowCards-container">
-                            <div id="RowCenter">
-                                <div className="EventCard">
-                                <span><a id="EventName" href="mingmingzhang.com"><img className="EventImg" src="meat.png"  alt="meat" /></a></span>
-                                </div>
-                                <div className="EventCard">
-                                <span><a id="EventName" href="mingmingzhang.com"><img src="mule.png"  alt="mule" width="100%" height="100%" /></a></span>
-                                </div> 
-                                <div className="EventCard">
-                                <span><a id="EventName" href="mingmingzhang.com"><img className="EventImg" src="beger.png"  alt="beger" /></a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         )

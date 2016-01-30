@@ -5,7 +5,13 @@
 App = {};
 
 Meteor.startup(function(){
+
     if (!Meteor.isServer){
+
+        Accounts.ui.config({
+            passwordSignupFields:"USERNAME_ONLY"
+        });
+
         window.onscroll = function(){headerScroll()};
 
         function headerScroll(){

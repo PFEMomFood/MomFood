@@ -145,7 +145,7 @@ body{
     position:relative;
     float: right;
     top:50px;
-    right:100px;
+    right:120px;
 }
 
 .header-item-left{
@@ -254,7 +254,7 @@ body{
     overflow: hidden;
     position: relative;
     text-align: center;
-    background-color: green;
+    /*background-color: green;*/
     width:1293px;
     height: 800px;
     margin-left: auto;
@@ -266,7 +266,7 @@ body{
     overflow: hidden;
     position: relative;
     text-align: center;
-    background-color: red;
+    /*background-color: red;*/
     width:1250px;
     height: 320px;
     margin-left: auto;
@@ -276,7 +276,7 @@ body{
 
 }
 #RowCenter{
-    background-color:#048;
+    /*background-color:#048;*/
     width:1200px;
     height: 300px;
     text-align: center;
@@ -287,11 +287,13 @@ body{
 }
 .EventCard{
     position: relative;
-    background-color: yellow;
-    width:400px;
+    /* background-color: yellow; */
+    width: 400px;
     height: 300px;
-    margin:auto 0;
+    margin: auto 0;
     float: left;
+    padding-left: 3px;
+    padding-right: 3px;
 }
 #EventName1{
     overflow: hidden;
@@ -302,8 +304,6 @@ body{
 .EventImg{
     width: 100%;
     height: 100%;
-} 
+}
 
-/* .inline{
-    float: left;
-} */
+/*add by bingbing*/
