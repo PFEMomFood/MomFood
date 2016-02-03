@@ -4,6 +4,8 @@
 
 App = {};
 
+
+
 Meteor.startup(function(){
 
     if (!Meteor.isServer){
