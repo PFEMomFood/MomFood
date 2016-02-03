@@ -58,6 +58,10 @@ App.index = React.createClass({
                         </div>
 
                     </div>
+                    <div id="event-container">
+                        {/*places put event cards.*/}
+                        <App.EventCardContainer />
+                    </div>
 
                 </div>
             </div>
