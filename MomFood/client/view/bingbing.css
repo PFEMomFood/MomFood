@@ -24,11 +24,7 @@ a:hover{
 #myModal{
     padding-top: 200px;
 }
-.login-SM{
-    margin-top:40px;
-    margin-left: 40px;
-    margin-right:40px;
-}
+
 @media (min-width: 400px){
     #conn-dialog{
         width:400px;
@@ -39,11 +35,16 @@ a:hover{
 
 .conn-form{
     margin:0px auto;
-    padding:40px;
+    padding-top:40px;
+    padding-left:40px;
+    padding-right:40px;
     text-align: center;
 
 }
 .conn-form input{
+    margin-bottom:20px;
+}
+.conn-form button{
     margin-bottom:20px;
 }
 
@@ -122,4 +123,11 @@ a:hover{
     text-align: center;
 
 }
-
+.btn-facebook{
+    background: #3B5998;
+    color:#FFFFFF;
+}
+.btn-google{
+    background:#C15647 ;
+    color:#fff;
+}

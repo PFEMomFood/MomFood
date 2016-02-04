@@ -2,12 +2,8 @@
  * Created by Emily on 18/01/16.
  */
 App.ConnModal = React.createClass({
-    mixins: [ReactMeteorData],
-    getMeteorData() {
-        return {
-            isLoginServiceConfigured:Accounts.loginServicesConfigured()
-        };
-    },
+
+
     /*isLoginServiceConfigured:function(){
         return Accounts.loginServicesConfigured();
     },*/
@@ -21,8 +17,7 @@ App.ConnModal = React.createClass({
             <div className="modal fade" id="myModal" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel" >
                 <div className="modal-dialog" id="conn-dialog">
                     <div className="modal-content">
-                        {this.data.isLoginServiceConfigured?
-                            <App.LoginWithSM />:""}
+
                         <App.LoginForm></App.LoginForm>
                         <App.RegisterForm></App.RegisterForm>
                     </div>
