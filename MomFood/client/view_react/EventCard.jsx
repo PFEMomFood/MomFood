@@ -7,10 +7,11 @@ App.EventCard = React.createClass({
        return(
            <div className="card-holder">
                <div className="card grow blur">
+
                </div>
                <div className="card-brief">
-                   <div className="card-brief-item "><span>18:00 7-2-2016 </span></div>
-                   <div className="card-brief-item item-right "><span>Efrei Paris </span></div>
+                   <div className="card-brief-item "><span>{this.props.eventData.host}</span></div>
+                   <div className="card-brief-item item-right "><span>{this.props.eventData.address.city}</span></div>
                </div>
            </div>
        )

@@ -4,30 +4,10 @@
 
 App = {};
 
-
+Events = MomFood.Collection.Events;
 
 Meteor.startup(function(){
 
-
-    /*Accounts.loginServiceConfiguration.remove({
-        service: "google"
-    });
-
-    Accounts.loginServiceConfiguration.insert({
-        service: "google",
-        clientId: "726709881035-2c44o2ar386ttbvbrvlp8786oincovmn.apps.googleusercontent.com",
-        secret: "kOQgCrff_cst54crZzLUt1Av"
-    });
-
-    Accounts.loginServiceConfiguration.remove({
-        service: "facebook"
-    });
-    Accounts.loginServiceConfiguration.insert({
-        service: "facebook",
-        loginStyle: "popup",
-        appId: "757885897677689",
-        secret: "52d234e2c04333bc672bdd48328cd73c"
-    });*/
 
     if (!Meteor.isServer){
         window.onscroll = function headerScroll(){
@@ -39,10 +19,6 @@ Meteor.startup(function(){
                }
 
         };
-
-
-
-
 
 
         /*Accounts.ui.config({

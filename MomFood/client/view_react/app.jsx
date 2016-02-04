@@ -7,9 +7,13 @@ App.index = React.createClass({
     // Loads items from the Tasks collection and puts them on this.data.tasks
     getMeteorData() {
         return {
-            currentUser:Meteor.user()
+            currentUser:Meteor.user(),
+            events:Events.find({}).fetch()
         };
     },
+    /*componentDidMount(){
+      console.log(this.data.events);
+    },*/
     getInitialState(){
         return {view: {showConnModal: false}}
     },
@@ -23,13 +27,13 @@ App.index = React.createClass({
         return(
             <div id="container-wrapper">
                 <link href='https://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css'/>
-               <App.search />
+                <App.search />
                 <App.header currentUser={this.data.currentUser} handleShowModal={this.handleShowModal} />
 
                 {this.state.view.showConnModal ? <App.ConnModal handleHideModal={this.handleHideModal}/> : null}
 
 
-                <div id="container">
+                <div id="main-container">
                     <div id="main-banner">
                         <div id="main-banner-title-container">
                             <div id="main-banner-title-wrapper">
@@ -57,12 +61,10 @@ App.index = React.createClass({
                         </div>
 
                     </div>
-                    <div id="event-container">
-                        {/*places put event cards.*/}
-                        <App.EventCardContainer />
-                    </div>
+
 
                 </div>
+                <App.EventCardContainer eventsData={this.data.events} ></App.EventCardContainer>
             </div>
         )
     }
