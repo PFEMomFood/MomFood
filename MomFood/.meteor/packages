@@ -27,4 +27,9 @@ twbs:bootstrap
 accounts-ui
 accounts-facebook
 accounts-google
+
 aldeed:collection2
+
+http
+service-configuration
+

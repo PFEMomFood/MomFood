@@ -6,7 +6,6 @@ App.header = React.createClass({
         $("#search-overlay").css({visibility:"visible",opacity:0.98});
     },
     render(){
-
         return(
             <div id="header" ref={function(ref){this.header = ref}}>
                 <div className="header-text header-item header-item-left">Homepage</div>

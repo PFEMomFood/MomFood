@@ -42,7 +42,7 @@ App.LoginForm=React.createClass({
 
     render(){
         return (
-            <div className="modal-content" id="login-form">
+            <div id="login-form">
                 <form className="conn-form" role="document"  onSubmit={this.loginUser} >
                     {
                         this.state.alert!==''?
