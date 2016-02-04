@@ -61,10 +61,10 @@ App.index = React.createClass({
                         </div>
 
                     </div>
-
+                    <App.EventCardContainer eventsData={this.data.events} ></App.EventCardContainer>
 
                 </div>
-                <App.EventCardContainer eventsData={this.data.events} ></App.EventCardContainer>
+
             </div>
         )
     }
