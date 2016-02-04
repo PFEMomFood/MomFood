@@ -24,13 +24,16 @@ a:hover{
 #myModal{
     padding-top: 200px;
 }
-
-
-
+.login-SM{
+    margin-top:40px;
+    margin-left: 40px;
+    margin-right:40px;
+}
 @media (min-width: 400px){
     #conn-dialog{
         width:400px;
         margin: 30px auto;
+
     }
 }
 

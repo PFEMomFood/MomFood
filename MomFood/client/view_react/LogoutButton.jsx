@@ -9,7 +9,8 @@ App.LogoutButton=React.createClass({
     },
     render(){
         return (
-            <a className='logout-button' onClick={this.logoutUser}>{this.props.currentUser.username}(Log out)</a>
+            <a className='logout-button' onClick={this.logoutUser}>
+                {this.props.currentUser.username?this.props.currentUser.username:this.props.currentUser.profile.name}(Log out)</a>
         );
     }
 })

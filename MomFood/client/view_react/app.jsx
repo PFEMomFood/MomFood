@@ -26,7 +26,6 @@ App.index = React.createClass({
                <App.search />
                 <App.header currentUser={this.data.currentUser} handleShowModal={this.handleShowModal} />
 
-
                 {this.state.view.showConnModal ? <App.ConnModal handleHideModal={this.handleHideModal}/> : null}
 
 

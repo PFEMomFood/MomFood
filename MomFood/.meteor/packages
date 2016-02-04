@@ -27,3 +27,5 @@ twbs:bootstrap
 accounts-ui
 accounts-facebook
 accounts-google
+http
+service-configuration
