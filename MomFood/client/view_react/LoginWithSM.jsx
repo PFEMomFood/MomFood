@@ -32,8 +32,8 @@ App.LoginWithSM = React.createClass({
     render(){
         return(
             <div className="login-SM">
-                <button className='btn-facebook butt col-12' onClick={this.toLoginFB}><i className="zmdi zmdi-facebook"></i>  &nbsp;Login With Facebook</button>
-                <button className='btn-google butt col-12' onClick={this.toLoginGL}><i className="zmdi zmdi-google"></i>  &nbsp;Login With Google</button>
+                <button className='btn-facebook butt col-md-12' onClick={this.toLoginFB}><i className="zmdi zmdi-facebook"></i>  &nbsp;Login With Facebook</button>
+                <button className='btn-google butt col-md-12' onClick={this.toLoginGL}><i className="zmdi zmdi-google"></i>  &nbsp;Login With Google</button>
             </div>
 
         )

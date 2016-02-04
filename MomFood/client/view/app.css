@@ -306,15 +306,16 @@ i.header-item{
 
 /*add by bingbing*/
 
+/*
 .card{
     position: absolute;
     width: 90%;
-    /* right: 0; */
-    /* right: 59px; */
+    /!* right: 0; *!/
+    /!* right: 59px; *!/
     left: 5%;
     top: 2%;
     padding-bottom: 65%;
-    /*border: solid red 1px;*/
+    /!*border: solid red 1px;*!/
     background-image: url("/lameloie.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
@@ -371,3 +372,4 @@ i.header-item{
 .card-center{
 
 }
+*/
