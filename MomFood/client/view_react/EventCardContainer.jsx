@@ -11,7 +11,6 @@ App.EventCardContainer = React.createClass({
         return (
             <ul className="container">
                 {eventNodes}
-
             </ul>
         )
     }
