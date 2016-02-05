@@ -10,7 +10,6 @@ ServiceConfiguration.configurations.upsert(
         }
     }
 );
-
 ServiceConfiguration.configurations.upsert(
     { service: "facebook" },
     {
@@ -21,3 +20,16 @@ ServiceConfiguration.configurations.upsert(
         }
     }
 );
+
+/*for deployed website*/
+/*
+ServiceConfiguration.configurations.upsert(
+    { service: "facebook" },
+    {
+        $set: {
+            loginStyle: "popup",
+            appId: "1533281963636882",
+            secret: "d0ce8fc75efe6c2012f734d6225cd645"
+        }
+    }
+);*/
