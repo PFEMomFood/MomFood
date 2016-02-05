@@ -334,23 +334,33 @@ i.header-item{
     -webkit-filter: blur(10px);
 }
 
+
+.hidden-card-description div{
+    visibility: hidden;
+}
+
+.hidden-card-description:hover div{
+    visibility: visible;
+}
+
+
 .card-brief{
     /*position: absolute;*/
     width: 100%;
    /* left: 5%;
     bottom: 13%;*/
     display: table;
-    margin-top: 10px;
+    margin-top: 7px;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 .card-brief-item{
-    width:50%;
+    width:40%;
     display: table-cell;
 
 }
 .item-right{
-    width:50%;
+    width:40%;
     display: table-cell;
     text-align: right;
 }
@@ -368,5 +378,12 @@ i.header-item{
 }*/
 
 .card-center{
+
+}
+
+@media only screen and (min-width: 1px) {
+    ul.container{
+        width:97%;
+    }
 
 }
