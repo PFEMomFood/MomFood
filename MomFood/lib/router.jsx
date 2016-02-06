@@ -4,7 +4,8 @@
 
 FlowRouter.route('/',{
     action:function(){
-        ReactLayout.render(App.index);
+        ReactLayout.render(App.index,
+            {content: <App.IndexMain/>} );
     }
 }
 
