@@ -248,9 +248,12 @@ i.header-item{
     font-size:3em;
 }
 
-.eventCard{
+.eventContainer{
     margin:20px 0 20px 0;
 }
+/*.eventCard:hover{
+    cursor:pointer;
+}*/
 .card-brief{
     width: 100%;
     display: table;
