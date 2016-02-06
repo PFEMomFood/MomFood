@@ -247,113 +247,12 @@ i.header-item{
 #main-banner-next-arrow:hover{
     font-size:3em;
 }
-/*zmm's EventCards css*/
-/*#EventCards{*/
-    /*overflow: hidden;*/
-    /*position: relative;*/
-    /*text-align: center;*/
-    /*!*background-color: green;*!*/
-    /*width:1293px;*/
-    /*height: 800px;*/
-    /*margin-left: auto;*/
-    /*margin-right: auto;*/
-    /*margin-top: 0px;*/
-    /*background-position: center;*/
-/*}*/
-/*#RowCards-container{*/
-    /*overflow: hidden;*/
-    /*position: relative;*/
-    /*text-align: center;*/
-    /*!*background-color: red;*!*/
-    /*width:1250px;*/
-    /*height: 320px;*/
-    /*margin-left: auto;*/
-    /*margin-right: auto;*/
-    /*margin-top: 20px;*/
-    /*background-position: center;*/
 
-/*}*/
-/*#RowCenter{*/
-    /*!*background-color:#048;*!*/
-    /*width:1200px;*/
-    /*height: 300px;*/
-    /*text-align: center;*/
-    /*position: relative;*/
-    /*overflow: hidden;*/
-    /*margin: 0 auto;*/
-    /*margin-top: 10px;*/
-/*}*/
-/*.EventCard{*/
-    /*position: relative;*/
-    /*!* background-color: yellow; *!*/
-    /*width: 400px;*/
-    /*height: 300px;*/
-    /*margin: auto 0;*/
-    /*float: left;*/
-    /*padding-left: 3px;*/
-    /*padding-right: 3px;*/
-/*}*/
-/*#EventName1{*/
-    /*overflow: hidden;*/
-    /*background-image:url("makalong.png");*/
-    /*text-align: center;*/
-/*}*/
-
-/*.EventImg{*/
-    /*width: 100%;*/
-    /*height: 100%;*/
-/*}*/
-
-/*add by bingbing*/
-
-.card{
-    /*width: 90%;*/
-    /* right: 0; */
-    /* right: 59px; */
-    /*left: 5%;
-    top: 2%;*/
-    padding-bottom: 60%;
-    border: 10px solid #fff;
-    background-image: url("/lameloie.jpg");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position-y: 50%;
-
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    transition: all 1s ease;
+.eventCard{
+    margin:20px 0 20px 0;
 }
-
-.grow:hover{
-    background-size: 120%;
-}
-
-.blur:hover{
-    -webkit-filter: blur(10px);
-}
-
-
-.hidden-card-description {
-  display:none;
-  position:absolute;
-    top: 30px;
-    left:30px;
-    right:30px;
-}
-
-/*
-.hidden-card-description:hover div{
-    visibility: visible;
-}
-*/
-
-
 .card-brief{
     width: 100%;
-   /* left: 5%;
-    bottom: 13%;*/
     display: table;
     margin-top: 7px;
     text-transform: uppercase;
@@ -370,21 +269,17 @@ i.header-item{
     text-align: right;
 }
 
-.card-holder{
-    padding-top: 30px;
-    padding-right: 30px;
-    padding-left: 30px;
+.card-brief-item i{
+    font-size:20px;
+    cursor: pointer;
 }
-/*
-.card-row {
-    display: table;
-    width: 99%;
-    margin: auto;
-}*/
-
-.card-center{
-
+.card-brief-item i:hover{
+    color:#FFA409;
 }
+.card-brief-item i.fa-heart{
+    color:#FFA409;
+}
+
 
 @media only screen and (min-width: 1px) {
     ul.container{
