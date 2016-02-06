@@ -32,4 +32,5 @@ ServiceConfiguration.configurations.upsert(
             secret: "d0ce8fc75efe6c2012f734d6225cd645"
         }
     }
-);*/
+);
+*/

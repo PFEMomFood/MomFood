@@ -312,8 +312,8 @@ i.header-item{
     /* right: 59px; */
     /*left: 5%;
     top: 2%;*/
-    padding-bottom: 65%;
-    /*border: solid red 1px;*/
+    padding-bottom: 60%;
+    border: 10px solid #fff;
     background-image: url("/lameloie.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
@@ -335,17 +335,22 @@ i.header-item{
 }
 
 
-.hidden-card-description div{
-    visibility: hidden;
+.hidden-card-description {
+  display:none;
+  position:absolute;
+    top: 30px;
+    left:30px;
+    right:30px;
 }
 
+/*
 .hidden-card-description:hover div{
     visibility: visible;
 }
+*/
 
 
 .card-brief{
-    /*position: absolute;*/
     width: 100%;
    /* left: 5%;
     bottom: 13%;*/
@@ -387,3 +392,5 @@ i.header-item{
     }
 
 }
+
+
