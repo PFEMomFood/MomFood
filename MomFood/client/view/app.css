@@ -11,7 +11,7 @@ body{
     max-width: 1440px;
 }
 /**/
-#main-container{
+#main-container-wrapper {
     position: relative;
     margin-left:auto;
     margin-right:auto;
@@ -19,6 +19,10 @@ body{
     width:98%;
     /*height:1900px;*/
     background-color: #F8F8F8;
+}
+
+#main-container{
+    padding-top:100px;
 }
 
 #header{
@@ -164,13 +168,14 @@ i.header-item{
 /*zmm changing make the image not overflow*/
 #main-banner{
     overflow: hidden;
+
 }
 
 #main-banner-title-container{
     text-align: center;
     position: relative;
     /*top:30px;*/
-    padding-top: 100px;
+    /*padding-top: 100px;*/
 }
 
 #main-banner-title-wrapper{

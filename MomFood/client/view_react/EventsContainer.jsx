@@ -1,7 +1,7 @@
 /**
  * Created by Cedric on 02/02/16.
  */
-App.EventCardContainer = React.createClass({
+App.EventsContainer = React.createClass({
     render(){
         var eventNodes=this.props.eventsData.map(function(event){
             return(

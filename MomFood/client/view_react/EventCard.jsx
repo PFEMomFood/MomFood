@@ -24,7 +24,7 @@ App.EventCard = React.createClass({
 
         <div className="eventContainer col-md-4 col-sm-6 col-xs-12">
             <div className="view view-first ">
-                <a href="#" className='eventCard'>
+                <a href={"/events/"+this.props.eventData._id} className='eventCard'>
                     <img src="/lameloie.jpg"/>
                     <div className="mask">
                         <h2>{this.props.eventData.title}</h2>

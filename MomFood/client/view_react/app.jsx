@@ -33,7 +33,10 @@ App.index = React.createClass({
                 {this.state.view.showConnModal ? <App.ConnModal handleHideModal={this.handleHideModal}/> : null}
 
                 {/*this is to render the content of the page*/}
-                {this.props.content}
+                <div id="main-container-wrapper">
+                    {this.props.content}
+                </div>
+
 
                 <App.Footer/>
 

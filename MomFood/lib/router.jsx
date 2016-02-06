@@ -7,6 +7,13 @@ FlowRouter.route('/',{
         ReactLayout.render(App.index,
             {content: <App.IndexMain/>} );
     }
-}
+})
 
-)
+FlowRouter.route('/events/:eventId',{
+    action:function(params){
+        ReactLayout.render(App.index,{
+            content: <App.EventMain eventId={params.eventId}/>
+        })
+    }
+})
+
