@@ -21,16 +21,20 @@ App.EventCard = React.createClass({
     render()
     {
         return (
-        <div className="eventCard col-md-4 col-sm-6 col-xs-12">
-                    <div className="view view-first ">
-                        <a href="#"><img src="/lameloie.jpg"/></a>
-                        <div className="mask">
-                            <h2>{this.props.eventData.title}</h2>
-                            <p>{this.props.eventData.description}</p>
-                            <h4 className='card-foot'>{this.props.eventData.price}€ per person</h4>
 
-                        </div>
+        <div className="eventContainer col-md-4 col-sm-6 col-xs-12">
+            <div className="view view-first ">
+                <a href="#" className='eventCard'>
+                    <img src="/lameloie.jpg"/>
+                    <div className="mask">
+                        <h2>{this.props.eventData.title}</h2>
+                        <p>{this.props.eventData.description}</p>
+                        <h4 className='card-foot'>{this.props.eventData.price}€ per person</h4>
                     </div>
+                </a>
+            </div>
+
+
                     <div className="card-brief">
 
                         <div className="card-brief-item "><span>{this.props.eventData.start.toDateString()}</span></div>
