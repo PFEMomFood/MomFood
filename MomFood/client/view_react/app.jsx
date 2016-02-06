@@ -65,6 +65,8 @@ App.index = React.createClass({
 
                 </div>
 
+                <App.Footer/>
+
             </div>
         )
     }
