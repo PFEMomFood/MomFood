@@ -25,22 +25,26 @@ a:hover{
     padding-top: 200px;
 }
 
-
-
 @media (min-width: 400px){
     #conn-dialog{
         width:400px;
         margin: 30px auto;
+
     }
 }
 
 .conn-form{
     margin:0px auto;
-    padding:40px;
+    padding-top:40px;
+    padding-left:40px;
+    padding-right:40px;
     text-align: center;
 
 }
 .conn-form input{
+    margin-bottom:20px;
+}
+.conn-form button{
     margin-bottom:20px;
 }
 
@@ -118,5 +122,116 @@ a:hover{
     border-bottom-left-radius: 6px;
     text-align: center;
 
+}
+.btn-facebook{
+    background: #3B5998;
+    color:#FFFFFF;
+}
+.btn-google{
+    background:#C15647 ;
+    color:#fff;
+}
+
+
+.view {
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    box-shadow: 1px 1px 2px #e6e6e6;
+    cursor: default;
+    background: #fff;
+}
+
+.view .mask{
+    width:100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    bottom:0;
+}
+
+.view img {
+    border: 10px solid #fff;
+    display: block;
+    position: relative;
+    width:100%;
+}
+.view h2 {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font-size: 17px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    margin: 8% 0 5% 0;
+}
+.view p {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 14px;
+    position: relative;
+    color: #fff;
+    margin-right:5%;
+    margin-left:5%;
+    text-align: center
+}
+.view .card-foot {
+    position: absolute;
+    display:block;
+    bottom:-10px;
+    padding:10px;
+    color: #fff;
+    background:rgba(130, 130, 130, 0.46);
+    font-weight: lighter;
+    font-style: italic;
+    width:100%;
+}
+.view a.info:hover {
+    box-shadow: 0 0 5px #000
+}
+
+.view-first img {
+    transition: all 0.2s linear;
+
+}
+.view-first .mask {
+    opacity: 0;
+    background-color: rgba(255, 164, 9, 0.6);
+    transition: all 0.4s ease-in-out;
+}
+
+.view-first h2 {
+    transform: translateY(-100px);
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+.view-first p {
+    transform: translateY(100px) rotate(90deg);
+    opacity: 0;
+    transition: all 0.2s linear;
+}
+.view-first .card-foot{
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+.view-first:hover img {
+    transform: scale(1.1);
+}
+.view-first:hover .mask {
+    opacity: 1;
+}
+.view-first:hover h2,
+.view-first:hover p,
+.view-first:hover .card-foot{
+    opacity: 1;
+    transform: translateY(0px);
+}
+.view-first:hover p {
+    transition-delay: 0.2s;
+}
+.view-first:hover .card-foot{
+    transition-delay: 0.5s;
 }
 

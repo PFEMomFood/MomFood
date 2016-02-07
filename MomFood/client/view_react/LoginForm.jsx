@@ -2,6 +2,12 @@
  * Created by Emily on 06/01/16.
  */
 App.LoginForm=React.createClass({
+    mixins: [ReactMeteorData],
+    getMeteorData() {
+        return {
+            isLoginServiceConfigured:Accounts.loginServicesConfigured()
+        };
+    },
     getInitialState: function() {
         return {userName: '', password: '',alert:''};
     },
@@ -42,8 +48,12 @@ App.LoginForm=React.createClass({
 
     render(){
         return (
-            <div className="modal-content" id="login-form">
+
+            <div id="login-form">
+
                 <form className="conn-form" role="document"  onSubmit={this.loginUser} >
+                    {this.data.isLoginServiceConfigured?
+                        <App.LoginWithSM />:""}
                     {
                         this.state.alert!==''?
                             <div className="alert alert-danger" role="alert">

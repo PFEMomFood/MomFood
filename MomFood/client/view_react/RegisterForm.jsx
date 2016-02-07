@@ -26,8 +26,13 @@ App.RegisterForm=React.createClass({
             if(pass==repass){
                 self=this;
                 Accounts.createUser({username: usr, password : pass}, function(err){
-                    if (err)
-                        self.setState({alert:'System error, please try to register again.'});
+                    if (err){
+                         self.setState({alert:err.message});
+                        /*self.setState({alert:'youyou'});*/
+                            //console.log(err.error);
+
+                    }
+
                     else
                     {
                         $('#myModal').modal('hide');
@@ -54,7 +59,7 @@ App.RegisterForm=React.createClass({
 
     render(){
         return (
-            <div className="modal-content" id="register-form">
+            <div  id="register-form">
                 <form className="conn-form" role="document"  onSubmit={this.RegisterUser} >
                     {
                         this.state.alert!==''?
