@@ -27,7 +27,10 @@ App.index = React.createClass({
         return(
             <div id="container-wrapper">
                 <link href='https://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css'/>
+                <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Tangerine"/>
+                <link href='https://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'/>
                 <App.search />
+
                 <App.header currentUser={this.data.currentUser} handleShowModal={this.handleShowModal} />
 
                 {this.state.view.showConnModal ? <App.ConnModal handleHideModal={this.handleHideModal}/> : null}
