@@ -13,7 +13,6 @@ Meteor.startup(function(){
         window.onscroll = function headerScroll(){
                if (document.body.scrollTop>50|| document.documentElement.scrollTop>50){
                    document.getElementById("header").className = "fixed-header";
-                   console.log(document.getElementById("header").className)
                }else{
                    document.getElementById("header").className="";
                }

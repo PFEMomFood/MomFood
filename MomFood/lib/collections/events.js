@@ -57,6 +57,10 @@ Schemas.Events = new SimpleSchema({
     price: {
         type: Number,
         label: "Price for an event"
+    },
+    images:{
+        type:[String],
+        label: "event images"
     }
 });
 
