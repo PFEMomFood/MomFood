@@ -9,7 +9,7 @@ App.header = React.createClass({
         return(
             <div id="header"  ref={function(ref){this.header = ref}}>
                 <div className='container'>
-                    <div className="header-text header-item header-item-left">Homepage</div>
+                    <div className="header-text header-item header-item-left"><a href="/">Homepage</a></div>
                     <div className="header-item" id="logo"><img src="/logo.png" alt=""/></div>
                     <i className="fa fa-search header-item header-item-right header-icon header-search-icon" onClick={this.handleClick}></i>
                     <i className="fa fa-spoon margin-bar header-item header-item-right header-icon"></i>

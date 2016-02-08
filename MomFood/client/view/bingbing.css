@@ -12,6 +12,10 @@ disabled的.butt 灰灰的backgroud，灰灰的text
 a:visited{
     text-decoration:none;
 }
+a:focus{
+    color:#FFA409;
+    text-decoration:none;
+}
 a{
     text-decoration:none;
     color:#FFA409 ;

@@ -351,4 +351,5 @@ ul.container{
     margin-top: 30px;
     margin-bottom: 30px;
     min-height: 300px;
+    overflow-x: hidden;
 }
