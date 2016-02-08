@@ -33,13 +33,11 @@ App.EventCard = React.createClass({
                     </div>
                 </a>
             </div>
-
-
-                    <div className="card-brief">
+                <div className="card-brief">
 
                         <div className="card-brief-item "><span>{this.props.eventData.start.toDateString()}</span></div>
                         <div className="card-brief-item " style={{"textAlign":"center","width":"auto"}}><i className={this.state.liked?'fa fa-heart':'fa fa-heart-o'} onClick={this.eventLiked}></i></div>
-                <div className="card-brief-item item-right "><span>{this.props.eventData.address.city}</span></div>
+                    <div className="card-brief-item item-right "><span>{this.props.eventData.address.city}</span></div>
 
             </div>
         </div>

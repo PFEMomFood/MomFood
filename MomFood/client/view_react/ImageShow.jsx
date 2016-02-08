@@ -35,7 +35,7 @@ App.ImageShow = React.createClass({
       return{
           display_image:"none",
           current_position:0,
-          slideWidth: window.innerWidth > 700 ? 700: window.innerWidth,
+          slideWidth: window.innerWidth * 0.7,
           isDisplay : (function(){
               var len = self.props.event.images.length;
               var isDisplay = [];

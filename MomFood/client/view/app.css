@@ -30,6 +30,7 @@ body{
 
 #main-container{
     padding-top:100px;
+    padding-bottom: 100px;
 }
 
 #header{
@@ -348,6 +349,6 @@ ul.container{
 
 #image-show-container{
     margin-top: 30px;
-    height: 600px;
-    background-color: rgb(32, 39, 31);
+    margin-bottom: 30px;
+    min-height: 300px;
 }

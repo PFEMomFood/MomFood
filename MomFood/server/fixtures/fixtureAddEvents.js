@@ -53,7 +53,7 @@ if (MomFood.Collection.Events.find().count() === 0){
             "country": "France"
         },
         price: 40,
-        images:["/lameloie.jpg","/beger.png","/crasong.png","/esgarool.png"]
+        images:["/lameloie.jpg","/beger.png","/esgarool.png"]
     };
 
     events4 = {
@@ -70,7 +70,7 @@ if (MomFood.Collection.Events.find().count() === 0){
             "country": "France"
         },
         price: 40,
-        images:["/lameloie.jpg","/beger.png","/crasong.png","/esgarool.png"]
+        images:["/beger.png","/crasong.png","/esgarool.png"]
     };
 
     events5 = {
@@ -87,7 +87,7 @@ if (MomFood.Collection.Events.find().count() === 0){
             "country": "France"
         },
         price: 40,
-        images:["/lameloie.jpg","/beger.png","/crasong.png","/esgarool.png"]
+        images:["/lameloie.jpg","/crasong.png","/esgarool.png"]
     };
 
     events6 = {
@@ -104,7 +104,7 @@ if (MomFood.Collection.Events.find().count() === 0){
             "country": "France"
         },
         price: 40,
-        images:["/lameloie.jpg","/beger.png","/crasong.png","/esgarool.png"]
+        images:["/lameloie.jpg","/beger.png","/crasong.png"]
     };
 
     events7 = {
@@ -121,7 +121,7 @@ if (MomFood.Collection.Events.find().count() === 0){
             "country": "France"
         },
         price: 40,
-        images:["/lameloie.jpg","/beger.png","/crasong.png","/esgarool.png"]
+        images:["/lameloie.jpg","/beger.png","/crasong.png","/esgarool.png","/dish_chinois.jpg"]
     };
     MomFood.Collection.Events.insert(events1);
     MomFood.Collection.Events.insert(events2);
