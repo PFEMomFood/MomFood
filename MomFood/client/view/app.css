@@ -1,6 +1,10 @@
+html{
+    height: 100%;
+}
 
 body{
     position:relative;
+    min-height: 100%;
 }
 
 .feature-color{
@@ -13,16 +17,20 @@ body{
 /**/
 #main-container-wrapper {
     position: relative;
-    margin-left:auto;
-    margin-right:auto;
-    margin-top:20px;
+    /*margin-left:auto;*/
+    /*margin-right:auto;*/
+    /*margin-top:20px;*/
+    /*margin-bottom: 20px;*/
+    margin: 20px auto;
     width:98%;
     /*height:1900px;*/
+    min-height: 875px;
     background-color: #F8F8F8;
 }
 
 #main-container{
     padding-top:100px;
+    padding-bottom: 100px;
 }
 
 #header{
@@ -256,6 +264,10 @@ i.header-item{
 .eventContainer{
     margin:20px 0 20px 0;
 }
+
+ul.container{
+    margin-bottom:0px;
+}
 /*.eventCard:hover{
     cursor:pointer;
 }*/
@@ -306,10 +318,14 @@ i.header-item{
     }
 }
 
+#footer-container{
+    width: 100%;
+}
+
 #footer{
     width: 100%;
     height: 60px;
-    background-color: #FFA409;
+    background-color: rgb(32, 39, 31);
     color: #fff;
     padding-top: 20px;
     margin-top: 30px;
@@ -325,4 +341,15 @@ i.header-item{
     width: 46%;
     display: inline-block;
     text-align: right;
+}
+
+@media print {
+    footer {page-break-after: always;}
+}
+
+#image-show-container{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    min-height: 300px;
+    overflow-x: hidden;
 }

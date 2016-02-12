@@ -3,7 +3,7 @@
  */
 App.Footer = React.createClass({
     render(){
-        return(<div id="footer-container">
+        return(<footer id="footer-container">
                 <div id="footer">
                     <p id="footer-left">
                         Privacy Policy&nbsp;
@@ -17,7 +17,7 @@ App.Footer = React.createClass({
 
                 </div>
 
-            </div>
+            </footer>
         );
     }
 })
