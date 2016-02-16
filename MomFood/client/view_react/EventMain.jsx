@@ -42,10 +42,13 @@ App.EventMain = React.createClass({
     render(){
         return(
             <div id="main-container" className="blueBoard container" >
-                <div id="image-show-container" className="col-md-9 col-sm-12">
-                    <App.ImageShow event={this.data.event} imageCount={this.data.event.images.length}/>
+                <div>
+                    <div id="image-show-container" className="col-md-9 col-sm-12">
+                        <App.ImageShow event={this.data.event} imageCount={this.data.event.images.length}/>
+                    </div>
+                    <App.ReserveInfo/>
                 </div>
-                <App.ReserveInfo/>
+
                 <App.MenuInfo/>
 
 
