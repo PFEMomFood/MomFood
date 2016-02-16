@@ -16,7 +16,9 @@ if (MomFood.Collection.Events.find().count() === 0){
             "street": "3 rue tronchet",
             "city": "Paris",
             "zip_code": 75008,
-            "country": "France"
+            "country": "France",
+            "longitude":48.871198,
+            "latitude":2.324887
         },
         price: 40,
         images:["/lameloie.jpg","/beger.png","/crasong.png","/esgarool.png"]
@@ -30,10 +32,12 @@ if (MomFood.Collection.Events.find().count() === 0){
         host: 123,
         participants: [234,345],
         address: {
-            "street": "3 rue tronchet",
+            "street": "9 Avenue Franco-Russe",
             "city": "Paris",
-            "zip_code": 75008,
-            "country": "France"
+            "zip_code": 75007,
+            "country": "France",
+            "longitude":48.859830,
+            "latitude":2.299310
         },
         price: 40,
         images:["/lameloie.jpg","/beger.png","/crasong.png","/esgarool.png"]
@@ -47,10 +51,12 @@ if (MomFood.Collection.Events.find().count() === 0){
         host: 123,
         participants: [234,345],
         address: {
-            "street": "3 rue tronchet",
+            "street": "27 rue de l'exposition",
             "city": "Paris",
-            "zip_code": 75008,
-            "country": "France"
+            "zip_code": 75007,
+            "country": "France",
+            "longitude": 48.857217,
+            "latitude": 2.304304
         },
         price: 40,
         images:["/lameloie.jpg","/beger.png","/esgarool.png"]
@@ -67,7 +73,9 @@ if (MomFood.Collection.Events.find().count() === 0){
             "street": "3 rue tronchet",
             "city": "Paris",
             "zip_code": 75008,
-            "country": "France"
+            "country": "France",
+            "longitude":48.831235,
+            "latitude":2.357004
         },
         price: 40,
         images:["/beger.png","/crasong.png","/esgarool.png"]
@@ -81,9 +89,9 @@ if (MomFood.Collection.Events.find().count() === 0){
         host: 123,
         participants: [234,345],
         address: {
-            "street": "3 rue tronchet",
+            "street": "213 Boulevard Vincent Auriol",
             "city": "Paris",
-            "zip_code": 75008,
+            "zip_code": 75013,
             "country": "France"
         },
         price: 40,
@@ -98,10 +106,12 @@ if (MomFood.Collection.Events.find().count() === 0){
         host: 123,
         participants: [234,345],
         address: {
-            "street": "3 rue tronchet",
+            "street": "76-78 Av. des Champs-Élysées",
             "city": "Paris",
             "zip_code": 75008,
-            "country": "France"
+            "country": "France",
+            "longitude":48.871689,
+            "latitude":2.304850
         },
         price: 40,
         images:["/lameloie.jpg","/beger.png","/crasong.png"]
@@ -115,10 +125,12 @@ if (MomFood.Collection.Events.find().count() === 0){
         host: 123,
         participants: [234,345],
         address: {
-            "street": "3 rue tronchet",
+            "street": "2 Rue d'Amsterdam",
             "city": "Paris",
-            "zip_code": 75008,
-            "country": "France"
+            "zip_code": 75009,
+            "country": "France",
+            "longitude":48.875812,
+            "latitude":2.327058
         },
         price: 40,
         images:["/lameloie.jpg","/beger.png","/crasong.png","/esgarool.png","/dish_chinois.jpg"]

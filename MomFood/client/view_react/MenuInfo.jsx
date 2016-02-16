@@ -4,7 +4,7 @@
 App.MenuInfo=React.createClass({
    render(){
        return(
-           <div className="col-md-9">
+           <div className="col-md-9 col-sm-12">
                <header className="menuTitle">Menu</header>
                <section>
                    <header className='section_title demo_line'>Entrée</header>

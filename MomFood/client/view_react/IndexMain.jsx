@@ -8,6 +8,16 @@ App.IndexMain = React.createClass({
             events:Events.find({}).fetch()
         };
     },
+    componentDidMount(){
+        window.onscroll = function headerScroll(){
+            if (document.body.scrollTop>50|| document.documentElement.scrollTop>50){
+                document.getElementById("header").className = "fixed-header";
+            }else{
+                document.getElementById("header").className="";
+            }
+
+        };
+    },
     render(){
         return(
             <div id="main-container">
