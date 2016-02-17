@@ -49,14 +49,12 @@ App.ImageShow = React.createClass({
     },
     componentDidMount(){
         window.addEventListener('resize', this.handleResize);
-        console.log("slideWidth",this.refs["slides-container"].offsetWidth)
     },
     componentWillUnmount(){
         window.removeEventListener('resize');
     },
 
     componentWillMount(){
-        console.log(this.state.isDisplay)
         var chooseClass =  this.state["ei-slider-element"]
         var self = this
         //this.imageSlides = this.props.event.images.map(function(url,index){

@@ -1,7 +1,6 @@
 App.MapContainer = React.createClass({
     mixins:[ReactMeteorData],
     getMeteorData(){
-        console.log("get meteor data reruned: ",Geolocation.latLng());
         return{
             location_error: Geolocation.error(),
             location: Geolocation.latLng(),
@@ -9,10 +8,10 @@ App.MapContainer = React.createClass({
         };
     },
     componentDidMount(){
-        console.log("location error: ", this.data.location_error)
         GoogleMaps.load();
     },
     render(){
+        console.log("render: ",this.data.location," ",this.data.loaded);
         if(this.data.loaded && this.data.location){
             return <App.GoogleMap name="MomFoodMap" center={this.data.location} zoom={13}/>
         }else{
