@@ -41,18 +41,19 @@ App.EventMain = React.createClass({
     },
     render(){
         return(
-            <div id="main-container" className="blueBoard" >
-                <div id="image-show-container">
+            <div id="main-container"  className="blueBoard" >
+                <div id="image-show-container " >
                     <App.ImageShow event={this.data.event} imageCount={this.data.event.images.length}/>
                 </div>
-                <div>
-                    <div className=" menuContainer animation-element slide-left">
-                        <header className="menuTitle animation-element slide-bottom">Menu</header>
+
+                <div >
+                    <div className=" menuContainer" >{/*animation-element slide-left">*/}
+                        <header className="menuTitle">Menu</header>
 
                         <section >
                             <header>Entrée</header>
                             <div className="dishContainer">
-                                <h3><i className="fa fa-spoon"></i> tastes of the sea</h3>
+                                <h3><i className="fa fa-spoon "></i> tastes of the sea</h3>
                                 <p>lemon myrtle cured tasmanian salmon, yarra valley salmon caviar vinaigrette
                                     poached spencer gulf prawn, black organic quinoa
                                     seared hervey bay scallop, potato strings</p>
@@ -83,7 +84,7 @@ App.EventMain = React.createClass({
 
 
                 </div>
-                <div className="profileContainer container animation-element slide-right ">
+                <div className="profileContainer container animation-element slide-right">
                     <header className="menuTitle animation-element slide-bottom">About the host</header>
                     <div className="profilePhoto col-md-6 col-sm-12">
                             <img src="/host2.jpg" alt=""/>

@@ -33,6 +33,7 @@ App.search = React.createClass({
                         <input id="search-input" onKeyPress={this.handleSubmit} type="text"
                                onInput={this.handleLength} style={{width:this.state.width}}/>
                     </div>
+                    <App.MapContainer/>
                 </div>
             </div>
 
