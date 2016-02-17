@@ -16,6 +16,7 @@ App.EventsContainer = React.createClass({
         });
         return (
             <ul className="container">
+
                 {eventNodes}
             </ul>
         )

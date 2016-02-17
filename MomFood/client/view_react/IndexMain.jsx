@@ -28,16 +28,16 @@ App.IndexMain = React.createClass({
                                             <span>Devant nous s'ouvre le souvenir  Derrière, le passé, l'enfance
                                             </span>
                             </div>
-                            <div id="main-banner-description">
+                            <div id="main-banner-description " >
                                 <span>Have you ever missed the flavor of your moms? Those are memories full with joy and laughters.
                                     Come and wake up memories of the food from your childhood. With the choice of editors, you are going
                                     to have a brand new old tongue.
                                 </span>
                             </div>
-                            <div id="main-banner-links">
-                                <a href="">Discover</a>
+                            <div id="main-banner-links"  className="animated pulse">
+                                <a href="#anchor">Discover</a>
                                 <i className="fa fa-spoon margin-bar"></i>
-                                <a href="">Reservation</a>
+                                <a href="#anchor">Reservation</a>
                             </div>
                         </div>
                     </div>
@@ -47,7 +47,9 @@ App.IndexMain = React.createClass({
                         </div>
                     </div>
 
+                    <a name="anchor"></a>
                 </div>
+
                 <App.EventsContainer eventsData={this.data.events} ></App.EventsContainer>
             </div>
         )
