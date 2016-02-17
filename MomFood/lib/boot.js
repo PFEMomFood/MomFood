@@ -10,14 +10,14 @@ Meteor.startup(function(){
 
 
     if (!Meteor.isServer){
-        window.onscroll = function headerScroll(){
+      /*  window.onscroll = function headerScroll(){
                if (document.body.scrollTop>50|| document.documentElement.scrollTop>50){
                    document.getElementById("header").className = "fixed-header";
                }else{
                    document.getElementById("header").className="";
                }
 
-        };
+        };*/
 
 
         /*Accounts.ui.config({

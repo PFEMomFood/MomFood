@@ -1,10 +1,10 @@
 .ei-slider{
     position: relative;
-    width: 70%;
+    /*width: 70%;*/
     /*max-width: 700px;*/
     height: 467px;
-    margin: 20px auto;
-    box-shadow: 0px 20px 80px gray;
+    /*margin: 20px auto;*/
+
     /*top:80px;*/
 }
 
