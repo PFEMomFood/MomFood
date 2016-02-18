@@ -46,9 +46,16 @@ Schemas.UserProfile = new SimpleSchema({
     country: {
         type: Schemas.UserCountry,
         optional: true
+    },
+    description:{
+        optional:true,
+        type:String,
+        max:400
+    },
+    photo:{
+        optional:true,
+        type:String
     }
-
-
 
 })
 
@@ -96,4 +103,5 @@ Schemas.Users = new SimpleSchema({
         type: Date,
         optional: true
     }
+
 })
