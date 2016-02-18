@@ -91,16 +91,18 @@ App.GoogleMap = React.createClass({
                 label: "Me"
             });
 
-            //var meCircle = new google.maps.Circle({
-            //    strokeColor: '#FF0000',
-            //    strokeOpacity: 0.8,
-            //    strokeWeight: 2,
-            //    fillColor: '#FF0000',
-            //    fillOpacity: 0.35,
-            //    map: map.instance,
-            //    center: this.props.center,
-            //    radius:  4000
-            //});
+            var meCircle = new google.maps.Circle({
+                center: map.options.center,
+                radius:  4000,
+                strokeColor: '#FFA409',
+                strokeOpacity: 0.4,
+                strokeWeight: 2,
+                fillColor: '#FFA409',
+                fillOpacity: 0.35,
+                map: map.instance,
+
+
+            });
 
         });
     },
@@ -110,13 +112,31 @@ App.GoogleMap = React.createClass({
             events = nextProps.eventsNearby;
             if(events){
                 var image = "/thumb/map-marker-icon3.png";
+
+                var markers = new Array();
                 for(var i = 0; i < events.length; i++){
                     console.log(events[i]);
+                    var map = GoogleMaps.maps.MomFoodMap.instance;
                     if (events[i]!==null) {
-                        new google.maps.Marker({
+                        markers[i] = new google.maps.Marker({
                             position: {lat: events[i].address.latitude, lng: events[i].address.longitude},
-                            map: GoogleMaps.maps.MomFoodMap.instance,
+                            map: map,
                             icon: image,
+                        })
+
+                        markers[i].eventId = events[i]._id;
+                        markers[i].clickTime = 0;
+
+                        markers[i].addListener("click",function(event){
+                            map.setZoom(14);
+                            map.setCenter(this.getPosition());
+                            this.clickTime++;
+                            if (this.clickTime == 2){
+                                this.clickTime = 0;
+                                document.getElementById("search-overlay").style.visibility = "hidden";
+                                //document.getElementById("search-overlay").style.opacity= "0.98";
+                                FlowRouter.go("/events/"+this.eventId)
+                            }
                         })
                     }
                 }
