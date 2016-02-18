@@ -7,14 +7,14 @@ App.ReserveInfo= React.createClass({
     render(){
       return(
           <div className="col-md-3 col-sm-12">
-              <h2 className="details-title">素味平生</h2>
+              <h2 className="details-title">{this.props.reserveInfo.title}</h2>
 
-              <p className="details-intro">南普陀寺的“天下第一素宴”在北京也可以吃到啦</p>
+              <p className="details-intro">{this.props.reserveInfo.description}</p>
 
-              <h5>RMB188元/1位</h5>
+              <h5>€{this.props.reserveInfo.price}/person</h5>
               <div className="detail-content">
                   <div className=" col-md-12 col-sm-6">
-                      <input className="theme-btn" value="Fri. Mar 11th 8:00PM">  </input>
+                      <div className="theme-btn" >{this.props.reserveInfo.start.toDateString()} </div>
                   </div>
                   <div className=" col-md-12 col-sm-3">
                       <select className=" theme-btn" >
