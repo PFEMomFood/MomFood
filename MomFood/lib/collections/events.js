@@ -25,6 +25,18 @@ Schemas.Address = new SimpleSchema({
     },
     country: {
         type: String
+    },
+    latitude:{
+        type: Number,
+        label: "latitude",
+        decimal: true,
+        optional: true
+    },
+    longitude:{
+        type: Number,
+        label: "longitude",
+        decimal: true,
+        optional: true
     }
 })
 

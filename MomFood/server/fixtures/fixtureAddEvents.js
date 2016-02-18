@@ -17,7 +17,7 @@ if (MomFood.Collection.Events.find().count() === 0){
             "city": "Paris",
             "zip_code": 75008,
             "country": "France",
-            "longitude":48.871198,
+            "latitude":48.871198,
             "latitude":2.324887
         },
         price: 40,
@@ -36,8 +36,8 @@ if (MomFood.Collection.Events.find().count() === 0){
             "city": "Paris",
             "zip_code": 75007,
             "country": "France",
-            "longitude":48.859830,
-            "latitude":2.299310
+            "latitude":48.859830,
+            "longitude":2.299310
         },
         price: 40,
         images:["/lameloie.jpg","/beger.png","/crasong.png","/esgarool.png"]
@@ -55,8 +55,8 @@ if (MomFood.Collection.Events.find().count() === 0){
             "city": "Paris",
             "zip_code": 75007,
             "country": "France",
-            "longitude": 48.857217,
-            "latitude": 2.304304
+            "latitude": 48.857217,
+            "longitude": 2.304304
         },
         price: 40,
         images:["/lameloie.jpg","/beger.png","/esgarool.png"]
@@ -74,8 +74,8 @@ if (MomFood.Collection.Events.find().count() === 0){
             "city": "Paris",
             "zip_code": 75008,
             "country": "France",
-            "longitude":48.831235,
-            "latitude":2.357004
+            "latitude":48.831235,
+            "longitude":2.357004
         },
         price: 40,
         images:["/beger.png","/crasong.png","/esgarool.png"]
@@ -110,8 +110,8 @@ if (MomFood.Collection.Events.find().count() === 0){
             "city": "Paris",
             "zip_code": 75008,
             "country": "France",
-            "longitude":48.871689,
-            "latitude":2.304850
+            "latitude":48.871689,
+            "longitude":2.304850
         },
         price: 40,
         images:["/lameloie.jpg","/beger.png","/crasong.png"]
@@ -129,8 +129,8 @@ if (MomFood.Collection.Events.find().count() === 0){
             "city": "Paris",
             "zip_code": 75009,
             "country": "France",
-            "longitude":48.875812,
-            "latitude":2.327058
+            "latitude":48.875812,
+            "longitude":2.327058
         },
         price: 40,
         images:["/lameloie.jpg","/beger.png","/crasong.png","/esgarool.png","/dish_chinois.jpg"]

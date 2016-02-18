@@ -4,11 +4,13 @@
 App.EventMain = React.createClass({
     mixins:[ReactMeteorData],
     getMeteorData(){
-      return{
-          event:Events.find({_id:this.props.eventId}).fetch()[0]
-      }
+        if (!this.props.eventId){
+            return;
+        }
+        return{
+            event:Events.find({_id:this.props.eventId}).fetch()[0]
+        }
     },
-
     componentDidMount: function() {
         window.onscroll = function headerScroll(){
             if (document.body.scrollTop>50|| document.documentElement.scrollTop>50){
@@ -24,7 +26,11 @@ App.EventMain = React.createClass({
             <div id="main-container" className="blueBoard container" >
                 <div>
                     <div id="image-show-container" className="col-md-9 col-sm-12">
-                        <App.ImageShow event={this.data.event} imageCount={this.data.event.images.length}/>
+                        {
+                            this.data.event ?
+                                <App.ImageShow event={this.data.event} imageCount={this.data.event.images.length}/>
+                                : null
+                        }
                     </div>
                     <App.ReserveInfo/>
                 </div>
