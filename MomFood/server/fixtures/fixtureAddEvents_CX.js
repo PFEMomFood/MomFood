@@ -13,7 +13,9 @@ if (MomFood.Collection.Events.find().count() === 0){
             "street": "3 Rue de téhéran ",
             "city": "Paris",
             "zip_code": 75008,
-            "country": "France"
+            "country": "France",
+			"latitude":48.8755962 ,
+            "longitude":2.3128031
         },
         price: 40,
 		images:["/lameloie.jpg","/beger.png","/crasong.png","/esgarool.png"]
@@ -29,7 +31,9 @@ if (MomFood.Collection.Events.find().count() === 0){
             "street": "16 rue Claude Bernard ",
             "city": "Paris",
             "zip_code": 75005,
-            "country": "France"
+            "country": "France",
+			"latitude":48.8397733 ,
+            "longitude":2.3476575
         },
         price: 50,
 		images:["/lameloie.jpg","/beger.png","/crasong.png","/esgarool.png"]
@@ -46,7 +50,9 @@ if (MomFood.Collection.Events.find().count() === 0){
             "street": " 19 boulevard du parc ",
             "city": "Neuilly-sur-Seine ",
             "zip_code":92051 ,
-            "country": "France"
+            "country": "France",
+			"latitude":48.8932853 ,
+            "longitude":2.2654337
         },
         price: 40,
 		images:["/lameloie.jpg","/beger.png","/crasong.png","/esgarool.png"]
@@ -60,10 +66,12 @@ if (MomFood.Collection.Events.find().count() === 0){
         host: 11,
         participants: [13,11],
         address: {
-            "street": " ",
+            "street": "32 Rue de Monceau",
             "city": "Paris",
             "zip_code": 75008,
-            "country": "France"
+            "country": "France",
+			"latitude":48.8768868 ,
+            "longitude":2.3091203
         },
         price: 40,
 		images:["/lameloie.jpg","/beger.png","/crasong.png","/esgarool.png"]
@@ -80,7 +88,9 @@ if (MomFood.Collection.Events.find().count() === 0){
             "street": "36 Rue de l'Arbalète ",
             "city": "Paris",
             "zip_code": 75005,
-            "country": "France"
+            "country": "France",
+			"latitude":48.839568,
+            "longitude":2.346348
         },
         price: 37,
 		images:["/lameloie.jpg","/beger.png","/crasong.png","/esgarool.png"]
@@ -97,7 +107,9 @@ if (MomFood.Collection.Events.find().count() === 0){
             "street": "31 Avenue Jean Moulin ",
             "city": "Torcy",
             "zip_code": 77200,
-            "country": "France"
+            "country": "France",
+			"latitude":48.833718 ,
+            "longitude":2.659891
         },
         price: 45,
 		images:["/lameloie.jpg","/beger.png","/crasong.png","/esgarool.png"]
@@ -114,7 +126,9 @@ if (MomFood.Collection.Events.find().count() === 0){
             "street": " 6 Rue Alfred de Musset  ",
             "city": "Villejiuf ",
             "zip_code": 94800  ,
-            "country": "France"
+            "country": "France",
+			"latitude":48.798031 ,
+            "longitude":2.364544
         },
         price: 30,
 		images:["/lameloie.jpg","/beger.png","/crasong.png","/esgarool.png"]
@@ -129,7 +143,9 @@ if (MomFood.Collection.Events.find().count() === 0){
             "street": " 11bis Rue Edmond Michelet",
             "city": "Le Kremlin-Bicêtre",
             "zip_code":94270  ,
-            "country": "France"
+            "country": "France",
+			"latitude":48.810911 ,
+            "longitude":2.363756
         },
         price: 55,
 		images:["/lameloie.jpg","/beger.png","/crasong.png","/esgarool.png"]
@@ -144,7 +160,9 @@ if (MomFood.Collection.Events.find().count() === 0){
             "street": "166 Avenue d'Italie  ",
             "city": "Paris",
             "zip_code": 75013  ,
-            "country": "France"
+            "country": "France",
+			"latitude":48.821323 ,
+            "longitude":2.358601
         },
         price: 40,
 		images:["/lameloie.jpg","/beger.png","/crasong.png","/esgarool.png"]

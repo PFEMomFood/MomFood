@@ -1,7 +1,7 @@
  
 var users1, users2, users3, users4, users5,users6, users7,  users8, users9, users10,users11, users12, users13, users14, users15 ;
 
-if (MomFood.Collection.Users.find().count() === 0){
+if (Meteor.users.find().count() === 0){
     console.log("***************Now creating new users***************")
     users1 = {
         username: "Jean",
@@ -159,6 +159,6 @@ if (MomFood.Collection.Users.find().count() === 0){
     Meteor.users.insert(users14);
     Meteor.users.insert(users15);
    
-    console.log("***************New entry created: ",MomFood.Collection.Users.find().count());
+    console.log("***************New entry created: ", Meteor.users.find().count());
     console.log("***************");
 }
