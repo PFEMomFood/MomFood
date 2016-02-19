@@ -6,13 +6,17 @@ App.EventCard = React.createClass({
         return {liked:false};
     },
     eventLiked:function(event){
-        if(!this.state.liked){
-            this.state.liked=true;
+        if(!this.props.liked){
+            //this.state.liked=true;
+            console.log("eventcard", this.props.eventData._id)
+            Meteor.users.update({_id:Meteor.userId()},{$push:{'profile.eventsLiked':this.props.eventData._id}})
             $(event.currentTarget).removeClass('fa-heart-o');
             $(event.currentTarget).addClass('fa-heart');
         }
         else {
-            this.state.liked=false;
+            console.log("eventcard", this.props.eventData._id)
+            Meteor.users.update({_id:Meteor.userId()},{$pull:{'profile.eventsLiked':this.props.eventData._id}})
+            //this.state.liked=false;
             $(event.currentTarget).removeClass('fa-heart');
             $(event.currentTarget).addClass('fa-heart-o');
         }
@@ -35,8 +39,8 @@ App.EventCard = React.createClass({
                 </div>
                     <div className="card-brief">
 
-                            <div className="card-brief-item "><span>{this.props.eventData.start.toDateString()}</span></div>
-                            <div className="card-brief-item " style={{"textAlign":"center","width":"auto"}}><i className={this.state.liked?'fa fa-heart':'fa fa-heart-o'} onClick={this.eventLiked}></i></div>
+                        <div className="card-brief-item "><span>{this.props.eventData.start.toDateString()}</span></div>
+                        <div className="card-brief-item " style={{"textAlign":"center","width":"auto"}}><i className={this.props.liked?'fa fa-heart':'fa fa-heart-o'} onClick={this.eventLiked}></i></div>
                         <div className="card-brief-item item-right "><span>{this.props.eventData.address.city}</span></div>
 
                 </div>

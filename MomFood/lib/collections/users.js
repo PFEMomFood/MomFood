@@ -55,6 +55,11 @@ Schemas.UserProfile = new SimpleSchema({
     photo:{
         optional:true,
         type:String
+    },
+    eventsLiked:{
+        optional:true,
+        type: [String],
+        label: "user favorate events"
     }
 
 })
