@@ -2,9 +2,6 @@
  * Created by Cedric on 02/02/16.
  */
 App.EventCard = React.createClass({
-    getInitialState: function(){
-        return {liked:false};
-    },
     eventLiked:function(event){
         if(!this.props.liked){
             //this.state.liked=true;
