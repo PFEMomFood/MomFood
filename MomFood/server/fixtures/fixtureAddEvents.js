@@ -24,7 +24,7 @@ if(Meteor.users.find().count()!==0){
                 "longitude":2.324887
             },
             price: 40,
-            images:["/lameloie.jpg","/beger.png","/crasong.png","/esgarool.png"]
+            images:["/beger.png","/lameloie.jpg","/crasong.png","/esgarool.png"]
         };
 
         events[1] = {
@@ -62,7 +62,7 @@ if(Meteor.users.find().count()!==0){
                 "longitude": 2.304304
             },
             price: 40,
-            images:["/lameloie.jpg","/beger.png","/esgarool.png"]
+            images:["/esgarool.png","/lameloie.jpg","/beger.png"]
         };
 
         events[3]= {
@@ -98,7 +98,7 @@ if(Meteor.users.find().count()!==0){
                 "country": "France"
             },
             price: 40,
-            images:["/lameloie.jpg","/crasong.png","/esgarool.png"]
+            images:["/crasong.png","/lameloie.jpg","/crasong.png","/esgarool.png"]
         };
 
         events[5] = {
@@ -117,7 +117,7 @@ if(Meteor.users.find().count()!==0){
                 "longitude":2.304850
             },
             price: 40,
-            images:["/lameloie.jpg","/beger.png","/crasong.png"]
+            images:["/dish_chinois.jpg","/lameloie.jpg","/beger.png","/crasong.png"]
         };
 
         events[6]= {

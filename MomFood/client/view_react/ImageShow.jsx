@@ -72,16 +72,16 @@ App.ImageShow = React.createClass({
         //  )
         //});
 
-        this.imageThumbs = this.props.event.images.map(function(url,index){
-            return(
-                <li key = {"thumb"+index}
-                    onClick = {self.handleClick.bind(self,index)}
-                    className="ei-slider-element" style={{width:1/self.props.imageCount*100+"%"}}>
-                    <a href="#" style={{background:"rgba(0,0,0,0.9)"}} >Slide 1</a>
-                    <img src={"/thumb"+ url.substring(0,url.length-4)+".jpg"} alt="thumb01" />
-                </li>
-            )
-        })
+        //this.imageThumbs = this.props.event.images.map(function(url,index){
+        //    return(
+        //        <li key = {"thumb"+index}
+        //            onClick = {self.handleClick.bind(self,index)}
+        //            className="ei-slider-element" style={{width:1/self.props.imageCount*100+"%"}}>
+        //            <a href="#" style={{background:"rgba(0,0,0,0.9)"}} >Slide 1</a>
+        //            <img src={"/thumb"+ url.substring(0,url.length-4)+".jpg"} alt="thumb01" />
+        //        </li>
+        //    )
+        //})
     },
 
     handleMouseEnter(e){
@@ -108,7 +108,7 @@ App.ImageShow = React.createClass({
         })
     },
     handleResize(e){
-        this.setState({slideWidth: (this.refs["slides-container"]? 0 : this.refs["slides-container"].offsetWidth)})
+        this.setState({slideWidth: (this.refs["slides-container"]? this.refs["slides-container"].offsetWidth:0)})
     },
 
     render(){
