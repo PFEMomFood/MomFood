@@ -2,15 +2,18 @@
  * Created by Cedric on 17/02/16.
  */
 Meteor.methods({
-    findEvents(userId,lat,lng){
+    findEvents(userId,lat,lng,distance){
         check(userId, String);
         check(lat,Number);
         check(lng,Number);
+
+        var eventRadius = distance ? distance:3000;
+
         var deg2rad = function(deg) {
             return deg * (Math.PI/180)
         };
 
-        var allEvents = MomFood.Collection.Events.find({},{fields:{address:1}});var R = 6371000;
+        var allEvents = MomFood.Collection.Events.find({},{fields:{address:1}});
 
         var r = 6371;
         console.log("my address: ",lat," ",lng);
@@ -26,10 +29,12 @@ Meteor.methods({
                         Math.sin(dLng/2) * Math.sin(dLng/2)
                     ;
                 var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-                var d = r * c; // Distance in km
-                console.log(event.address.longitude," ",event.address.latitude," distance: ",d*1000);
-                if (d < 3){
+                var d = r * c * 1000; // Distance in km
+                console.log("eventRadius: ",eventRadius,event.address.longitude," ",event.address.latitude," distance: ",d);
+                if (d < eventRadius){
                     return event;
+                }else{
+                    return null;
                 }
             });
     }

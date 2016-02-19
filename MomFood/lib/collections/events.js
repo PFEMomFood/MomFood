@@ -55,7 +55,7 @@ Schemas.Events = new SimpleSchema({
         label: "Start date of the event"
     },
     host: {
-        type: Number,
+        type: String,
 
     },
     participants: {

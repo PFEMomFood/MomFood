@@ -49,6 +49,9 @@ App.ImageShow = React.createClass({
     },
     componentDidMount(){
         window.addEventListener('resize', this.handleResize);
+        this.setState({
+            slideWidth: document.getElementById("image-show-container").offsetWidth
+        });
     },
     componentWillUnmount(){
         window.removeEventListener('resize');
@@ -68,6 +71,7 @@ App.ImageShow = React.createClass({
         //      </li>
         //  )
         //});
+
         this.imageThumbs = this.props.event.images.map(function(url,index){
             return(
                 <li key = {"thumb"+index}
@@ -104,7 +108,7 @@ App.ImageShow = React.createClass({
         })
     },
     handleResize(e){
-        this.setState({slideWidth: this.refs["slides-container"].offsetWidth})
+        this.setState({slideWidth: (this.refs["slides-container"]? 0 : this.refs["slides-container"].offsetWidth)})
     },
 
     render(){

@@ -14,7 +14,7 @@ if (MomFood.Collection.Events.find().count() === 0){
             "city": "Paris",
             "zip_code": 75008,
             "country": "France",
-			"latitude":48.8755962 ,
+			"latitude":48.8755962,
             "longitude":2.3128031
         },
         price: 40,

@@ -7,19 +7,19 @@ App.EventMain = React.createClass({
         if (!this.props.eventId){
             return;
         }
-        return{
-            event:Events.find({_id:this.props.eventId}).fetch()[0]
+        else
+        {
+            var event=Events.find({_id:this.props.eventId}).fetch()[0];
+            return{
+                event:event,
+                host: Meteor.users.find({_id:event.host}).fetch()[0]
+            }
         }
+
     },
     componentDidMount: function() {
-        window.onscroll = function headerScroll(){
-            if (document.body.scrollTop>50|| document.documentElement.scrollTop>50){
-                document.getElementById("header").className = "fixed-header";
-            }else{
-                document.getElementById("header").className="";
-            }
-        };
-        window.addEventListener('scroll', this.check_if_in_view);
+        window.scrollTo(0, 0);
+        console.log(this.data.event)
     },
     render(){
         return(
@@ -32,12 +32,12 @@ App.EventMain = React.createClass({
                                 : null
                         }
                     </div>
-                    <App.ReserveInfo/>
+                    <App.ReserveInfo reserveInfo={this.data.event}/>
                 </div>
 
                 <App.MenuInfo/>
 
-                <App.HostInfo/>
+                <App.HostInfo host={this.data.host}/>
             </div>
         )
     }
