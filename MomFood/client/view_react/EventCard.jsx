@@ -2,19 +2,25 @@
  * Created by Cedric on 02/02/16.
  */
 App.EventCard = React.createClass({
+
     getInitialState: function(){
-        return {liked:false};
+        return {liked:this.props.eventData.liked};
     },
+
     eventLiked:function(event){
         if(!this.state.liked){
             this.state.liked=true;
             $(event.currentTarget).removeClass('fa-heart-o');
             $(event.currentTarget).addClass('fa-heart');
+            Meteor.users.update({_id: Meteor.userId()},{$push:{'profile.eventsLiked':this.props.eventData._id }});
+
         }
         else {
             this.state.liked=false;
+
             $(event.currentTarget).removeClass('fa-heart');
             $(event.currentTarget).addClass('fa-heart-o');
+            Meteor.users.update({_id: Meteor.userId()},{$pull:{'profile.eventsLiked':this.props.eventData._id }});
         }
 
     },
@@ -22,7 +28,7 @@ App.EventCard = React.createClass({
     {
         return (
             <div className="eventContainer col-md-4 col-sm-6 col-xs-12">
-                <div className="view view-first ">
+                <div className="view view-first">
                     <a href={"/events/"+this.props.eventData._id} className='eventCard'>
                         <img src={"/"+this.props.img}/>
                         <div className="mask">

@@ -38,6 +38,10 @@ App.EventMain = React.createClass({
                 <App.MenuInfo/>
 
                 <App.HostInfo host={this.data.host}/>
+
+
+
+
             </div>
         )
     }

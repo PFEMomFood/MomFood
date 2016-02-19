@@ -4,20 +4,34 @@
 App.IndexMain = React.createClass({
     mixins: [ReactMeteorData],
     getMeteorData() {
+        var events= MomFood.Collection.Events.find({}).fetch();
+        var currentuserId= Meteor.userId();
+        if (Meteor.users.find().count() != 0&& events.length != 0) {
+            var eventsLiked = Meteor.users.find({_id: currentuserId}, {fields: {'profile.eventsLiked': 1}}).fetch()[0].profile.eventsLiked;
+
+            for(var i=0;i<events.length;i++){
+                for(var j=0;j < eventsLiked.length; j++)
+                    if(eventsLiked[j]==events[i]._id)
+                    {
+                        events[i].liked=true;
+                        break;
+                    }
+                    else
+                        events[i].liked=false;
+             }
+        }
+        console.log(events);
+        console.log(eventsLiked)
         return {
-            events:Events.find({}).fetch()
+                events:events,
+                currentUser:currentuserId
         };
     },
-    /*componentDidMount(){
-        window.onscroll = function headerScroll(){
-            if (document.body.scrollTop>50|| document.documentElement.scrollTop>50){
-                document.getElementById("header").className = "fixed-header";
-            }else{
-                document.getElementById("header").className="";
-            }
 
-        };
-    },*/
+    componentWillReceiveProps(nextProps){
+        console.log("nextProps")
+    },
+
     render(){
         return(
             <div id="main-container">
@@ -25,8 +39,7 @@ App.IndexMain = React.createClass({
                     <div id="main-banner-title-container">
                         <div id="main-banner-title-wrapper">
                             <div id="main-banner-title">
-                                            <span>Devant nous s'ouvre le souvenir  Derrière, le passé, l'enfance
-                                            </span>
+                                <span>Devant nous s'ouvre le souvenir  Derrière, le passé, l'enfance</span>
                             </div>
                             <div id="main-banner-description " >
                                 <span>Have you ever missed the flavor of your moms? Those are memories full with joy and laughters.

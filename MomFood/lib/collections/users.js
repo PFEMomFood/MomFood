@@ -102,6 +102,10 @@ Schemas.Users = new SimpleSchema({
     heartbeat: {
         type: Date,
         optional: true
+    },
+    eventsLiked:{
+        type:[String],
+        optional:true
     }
 
 })

@@ -371,7 +371,6 @@ a:hover{
     -webkit-transition: -webkit-transform 1s;
 }
 .profileContainer{
-    margin: 10px;
     padding: 20px;
     box-shadow: 0 20px 80px 0 rgba(0, 0, 0, 0.08);
 }
@@ -425,4 +424,26 @@ a:hover{
     border-left: 200px solid #ddd;
     border-right: 200px solid #ddd;
     text-align: center;
+}
+/*
+@media (min-width: 992px){
+    .wrapper {
+        width: 940px;
+        margin: 0 auto;
+        position: relative; /!* Ensure absolute positioned child elements are relative to this *!/
+    }
+    /!* Absolute positioned wrapper for the element you want to fix position *!/
+    .fixed-wrapper {
+        width: 220px;
+        position: absolute;
+    }
+    .fixed {
+        width: 250px;
+        position: fixed;
+        top:80px;
+    }
+}*/
+
+#reserveInfo{
+    padding-top: 10px;
 }

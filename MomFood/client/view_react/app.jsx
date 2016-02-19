@@ -11,8 +11,8 @@ App.index = React.createClass({
             events:Events.find({}).fetch()
         };
     },
-    /*componentDidMount(){
-      console.log(this.data.events);
+  /*  componentDidMount(){
+      console.log(this.data.currentUser._id);
     },*/
     getInitialState(){
         return {view: {showConnModal: false}}
