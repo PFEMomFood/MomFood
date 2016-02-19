@@ -135,29 +135,29 @@ if (MomFood.Collection.Users.find().count() === 0){
         },
     };
 	  users15 = {
-        username: "",
+        username: "Alice",
         createdAt: new Date(),
         profile: {
-            "firstName":"",
-            "lastName": "",
+            "firstName":"Alice",
+            "lastName": "Tati",
             "gender": "Female",
         },
     };
-    MomFood.Collection.Users.insert(users1);
-    MomFood.Collection.Users.insert(users2);
-    MomFood.Collection.Users.insert(users3);
-    MomFood.Collection.Users.insert(users4);
-    MomFood.Collection.Users.insert(users5);
-    MomFood.Collection.Users.insert(users6);
-    MomFood.Collection.Users.insert(users7);
-    MomFood.Collection.Users.insert(users8);
-    MomFood.Collection.Users.insert(users9);
-    MomFood.Collection.Users.insert(users10);
-    MomFood.Collection.Users.insert(users11);
-    MomFood.Collection.Users.insert(users12);
-    MomFood.Collection.Users.insert(users13);
-    MomFood.Collection.Users.insert(users14);
-    MomFood.Collection.Users.insert(users15);
+    Meteor.users.insert(users1);
+    Meteor.users.insert(users2);
+    Meteor.users.insert(users3);
+    Meteor.users.insert(users4);
+    Meteor.users.insert(users5);
+    Meteor.users.insert(users6);
+    Meteor.users.insert(users7);
+    Meteor.users.insert(users8);
+    Meteor.users.insert(users9);
+    Meteor.users.insert(users10);
+    Meteor.users.insert(users11);
+    Meteor.users.insert(users12);
+    Meteor.users.insert(users13);
+    Meteor.users.insert(users14);
+    Meteor.users.insert(users15);
    
     console.log("***************New entry created: ",MomFood.Collection.Users.find().count());
     console.log("***************");
