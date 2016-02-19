@@ -9,13 +9,25 @@ App.search = React.createClass({
         this.setState({width:event.target.value.length*20})
     },
     getInitialState(){
-        return {width:50}
+        return {
+            width:50,
+            eventRadius: 3000,
+        }
     },
     handleSubmit(e){
         var key = e.which || e.keyCode
         if (key == 13) {
-            $("#search-overlay").css({visibility:"hidden",opacity:0});
+
             console.log("submit")
+            if (!isNaN(Number(e.currentTarget.value))){
+                console.log("user input number: ",Number(e.currentTarget.value))
+                this.setState({
+                    eventRadius:Number(e.currentTarget.value)
+                })
+            }else{
+                console.log("user input: ", e.currentTarget.value)
+                $("#search-overlay").css({visibility:"hidden",opacity:0});
+            }
         }
     },
     render(){
@@ -33,7 +45,9 @@ App.search = React.createClass({
                         <input id="search-input" onKeyPress={this.handleSubmit} type="text"
                                onInput={this.handleLength} style={{width:this.state.width}}/>
                     </div>
-                    <App.MapContainer/>
+
+                    <App.MapContainer eventRadius={this.state.eventRadius}/>
+
                 </div>
             </div>
 

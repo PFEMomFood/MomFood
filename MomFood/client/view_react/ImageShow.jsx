@@ -108,7 +108,7 @@ App.ImageShow = React.createClass({
         })
     },
     handleResize(e){
-        this.setState({slideWidth: this.refs["slides-container"].offsetWidth})
+        this.setState({slideWidth: (this.refs["slides-container"]? 0 : this.refs["slides-container"].offsetWidth)})
     },
 
     render(){
