@@ -175,7 +175,7 @@ if(Meteor.users.find().count()!==0){
                 "longitude": 2.368857
             },
             price: 40,
-            images:["/porc.jpg","/pasta.png","/porc-roti.png","/esgarool.png","/poulet.jpg"]
+            images:["/porc.jpg","/pasta.png","/porc-roti.jpg","/esgarool.png","/poulet.jpg"]
         };
 
         events[9]={
