@@ -17,3 +17,12 @@ FlowRouter.route('/events/:eventId',{
     }
 })
 
+FlowRouter.route('/users/:userId/wishList',{
+    action:function(params){
+        ReactLayout.render(App.index,{
+            content: <App.WishListMain userId={params.userId}/>
+        })
+    }
+})
+
+

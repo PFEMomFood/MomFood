@@ -92,9 +92,9 @@ if(Meteor.users.find().count()!==0){
             host: '',
             participants: [234,345],
             address: {
-                "street": "213 Boulevard Vincent Auriol",
-                "city": "Paris",
-                "zip_code": 75013,
+                "street": "13 Rue Georges Lebigot",
+                "city": " Villejuif",
+                "zip_code": 94800,
                 "country": "France"
             },
             price: 40,
@@ -128,29 +128,99 @@ if(Meteor.users.find().count()!==0){
             host: '',
             participants: [234,345],
             address: {
-                "street": "2 Rue d'Amsterdam",
-                "city": "Paris",
-                "zip_code": 75009,
+                "street": "23 Voie Coysevox",
+                "city": " Vitry-sur-Seine",
+                "zip_code": 94400,
                 "country": "France",
-                "latitude":48.875812,
-                "longitude":2.327058
+                "latitude":48.788194,
+                "longitude": 2.379185
             },
             price: 40,
-            images:["/lameloie.jpg","/beger.png","/crasong.png","/esgarool.png","/dish_chinois.jpg"]
+            images:["/lameloie.jpg","/beger.png","/crasong.png","/porc-roti.png","/ice-cream.jpg"]
         };
 
-        /*console.log(userIds[0]._id);*/
-        for (var i=0;i<7;i++){
 
-           events[i].host=userIds[Math.floor(Math.random() * 5)]._id;
+        events[7]={
+            title: "Quality Time with Andrew",
+            description: "This is going to be an excellent event with Andrew, we are hoping to have nice meals and " +
+            "of course, unforgettable teaching ",
+            start: new Date(),
+            host: '',
+            participants: [234,345],
+            address: {
+                "street": "123 Boulevard Maxime Gorki",
+                "city": "Villejuif",
+                "zip_code": 94800 ,
+                "country": "France",
+                "latitude":48.792661,
+                "longitude":2.370087
+            },
+            price: 40,
+            images:["/poulet-roti.jpg","/beger.png","/crasong.png","/esgarool.png","/dish_chinois.jpg"]
+        };
+
+        events[8]={
+            title: "Quality Time with Andrew",
+            description: "This is going to be an excellent event with Andrew, we are hoping to have nice meals and " +
+            "of course, unforgettable teaching ",
+            start: new Date(),
+            host: '',
+            participants: [234,345],
+            address: {
+                "street": "86 Boulevard Maxime Gorki",
+                "city": "Villejuif",
+                "zip_code":  94800 ,
+                "country": "France",
+                "latitude":48.793787,
+                "longitude": 2.368857
+            },
+            price: 40,
+            images:["/porc.jpg","/pasta.png","/porc-roti.png","/esgarool.png","/poulet.jpg"]
+        };
+
+        events[9]={
+            title: "ROMAN HOLIDAYS",
+            description: "THE BEST IS COMING AND MEMORABLE EVENINGS TOO!!!!! ENJOY YOUR TIME WITH GREAT COMPANY AND HAPPY PEOPLE WHO LOVE THE LIFE ",
+            start: new Date(),
+            host: '',
+            participants: [234,345],
+            address: {
+                "street": "67 Avenue de Stalingrad",
+                "city": "Villejuif",
+                "zip_code":  94800 ,
+                "country": "France",
+                "latitude":48.783161,
+                "longitude": 2.368070
+            },
+            price: 40,
+            images:["/porc-roti.jpg","/poulet.jpg","/crasong.png","/ice-cream.jpg"]
+        };
+
+        events[9]={
+            title: "Japanese Time",
+            description: "THE BEST IS COMING AND MEMORABLE EVENINGS TOO!!!!! ENJOY YOUR TIME WITH GREAT COMPANY AND HAPPY PEOPLE WHO LOVE THE LIFE ",
+            start: new Date(),
+            host: '',
+            participants: [234,345],
+            address: {
+                "street": "15 Avenue de Paris",
+                "city": "Villejuif",
+                "zip_code":  94800 ,
+                "country": "France",
+                "latitude":48.783161,
+                "longitude": 2.368070
+            },
+            price: 40,
+            images:["/Japanese Food.jpg","/porc.jpg","/ice-cream.jpeg","/dish_chinois.jpg"]
+        };
+
+
+        /*console.log(userIds[0]._id);*/
+        for (var i=0;i<10;i++){
+            events[i].host=userIds[Math.floor(Math.random() * 5)]._id;
+            MomFood.Collection.Events.insert(events[i]);
         }
-        MomFood.Collection.Events.insert(events[0]);
-        MomFood.Collection.Events.insert(events[1]);
-        MomFood.Collection.Events.insert(events[2]);
-        MomFood.Collection.Events.insert(events[3]);
-        MomFood.Collection.Events.insert(events[4]);
-        MomFood.Collection.Events.insert(events[5]);
-        MomFood.Collection.Events.insert(events[6]);
+
 
         console.log("***************New entry created: ",MomFood.Collection.Events.find().count());
         console.log("****************");

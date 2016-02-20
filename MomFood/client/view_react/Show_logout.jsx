@@ -16,7 +16,7 @@ App.Show_logout= React.createClass({
                 </a>
                 <ul className="dropdown-menu" aria-labelledby="dropdownMenu1">
                     <li><a href="#">My Profile</a></li>
-                    <li><a href="#">Wish Lists</a></li>
+                    <li><a href={"/users/"+Meteor.userId()+"/wishlist" }>Wish Lists</a></li>
                     <li><a href="#">Messages</a></li>
                     <li role="separator" className="divider"></li>
                     <li><a href="#" onClick ={ this.logoutUser }>Log out</a></li>
