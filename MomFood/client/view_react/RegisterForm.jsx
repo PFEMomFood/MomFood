@@ -56,7 +56,15 @@ App.RegisterForm=React.createClass({
     handleRepassChange:function(e) {
         this.setState({repass: e.target.value});
     },
-
+//this part is to handle the login and than sending the well come E-mail
+        handleClick: function() {
+            //send email
+            Meteor.call('sendEmail',
+            'zhmm1@hotmail.com',
+            'automated@momfood.com',
+            'Welcome to MomFood!',
+            'This is a welcome E-mail for welcome new customer when registered success,hope you would enjoy our Momfood platform.');
+},
     render(){
         return (
             <div  id="register-form">
@@ -74,7 +82,7 @@ App.RegisterForm=React.createClass({
                     <br/>
                     <input className="btn-input butt col-12" type="password"  placeholder="password(again)"  value={this.state.repass}onChange={this.handleRepassChange}/>
                     <br/>
-                    <button className="btn-main butt col-12" type="submit" disabled={this.state.userName==''||this.state.password==''||this.state.repass==''}>REGISTER</button>
+                    <button className="btn-main butt col-12" type="submit" onClick={this.handleClick} disabled={this.state.userName==''||this.state.password==''||this.state.repass==''}>REGISTER</button>
 
 
                 </form>
